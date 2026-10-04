@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -32,5 +33,19 @@ class TypeChartTest {
         TypeChart typeChart = new TypeChart();
         assertEquals(1, typeChart.getDamageMultiplier("Water","Bug"));
     }
+
+    @Test
+    void unknownDefendingTypeThrows() throws Exception {
+    TypeChart typeChart = new TypeChart();
+    assertThrows(IllegalArgumentException.class,
+            () -> typeChart.getDamageMultiplier("Fire", "Fariy"));
+}
+
+ @Test
+    void unknownAttackingTypeThrows() throws Exception {
+    TypeChart typeChart = new TypeChart();
+    assertThrows(IllegalArgumentException.class,
+            () -> typeChart.getDamageMultiplier("Fireball", "Fariy"));
+}
 
 }

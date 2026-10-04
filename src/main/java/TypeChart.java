@@ -17,7 +17,27 @@ public class TypeChart {
         return types;
     }
 
+    private boolean isValidType(String typeName) {
+        
+        for (TypeEntry entry : types ) {
+            if(typeName.equals(entry.name()) ){
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+
     public double getDamageMultiplier(String attackingType, String defendingType) {
+
+        if (!isValidType(attackingType)) {
+            throw new IllegalArgumentException("Unknown attacking type: " + attackingType);
+        }
+
+        if (!isValidType(defendingType)) {
+            throw new IllegalArgumentException("Unknown defending type: " + defendingType);
+        }
 
         double damageMultiplier = 1.0;
 
