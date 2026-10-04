@@ -1,0 +1,110 @@
+[
+{
+  "name": "Normal",
+  "takesDoubleFrom": ["Fighting"],
+  "takesHalfFrom": [],
+  "takesNoneFrom": ["Ghost"]
+},
+{
+  "name": "Fighting",
+  "takesDoubleFrom": ["Flying", "Psychic", "Fairy"],
+  "takesHalfFrom": ["Rock", "Bug", "Dark"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Flying",
+  "takesDoubleFrom": ["Rock", "Electric", "Ice"],
+  "takesHalfFrom": ["Fighting", "Bug", "Grass"],
+  "takesNoneFrom": ["Ground"]
+},
+{
+  "name": "Poison",
+  "takesDoubleFrom": ["Ground", "Psychic"],
+  "takesHalfFrom": ["Fighting", "Poison", "Bug", "Grass", "Fairy"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Ground",
+  "takesDoubleFrom": ["Water", "Grass", "Ice"],
+  "takesHalfFrom": ["Poison", "Rock"],
+  "takesNoneFrom": ["Electric"]
+},
+{
+  "name": "Rock",
+  "takesDoubleFrom": ["Fighting", "Ground", "Steel", "Water", "Grass"],
+  "takesHalfFrom": ["Normal", "Fire", "Poison", "Flying"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Bug",
+  "takesDoubleFrom": ["Flying", "Rock", "Fire"],
+  "takesHalfFrom": ["Fighting", "Ground", "Grass"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Ghost",
+  "takesDoubleFrom": ["Ghost", "Dark"],
+  "takesHalfFrom": ["Bug", "Poison"],
+  "takesNoneFrom": ["Normal", "Fighting"]
+},
+{
+  "name": "Steel",
+  "takesDoubleFrom": ["Fighting", "Ground", "Fire"],
+  "takesHalfFrom": ["Bug", "Rock", "Steel", "Grass", "Psychic", "Ice", "Dragon", "Fairy", "Normal", "Flying"],
+  "takesNoneFrom": ["Poison"]
+},
+{
+  "name": "Fire",
+  "takesDoubleFrom": ["Ground", "Rock", "Water"],
+  "takesHalfFrom": ["Bug", "Steel", "Fire", "Grass", "Ice", "Fairy"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Water",
+  "takesDoubleFrom": ["Grass", "Electric"],
+  "takesHalfFrom": ["Steel", "Fire", "Water", "Ice"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Grass",
+  "takesDoubleFrom": ["Flying", "Poison", "Bug", "Fire", "Ice"],
+  "takesHalfFrom": ["Ground", "Water", "Grass", "Electric"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Electric",
+  "takesDoubleFrom": ["Ground"],
+  "takesHalfFrom": ["Flying", "Steel", "Electric"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Psychic",
+  "takesDoubleFrom": ["Dark", "Bug", "Ghost"],
+  "takesHalfFrom": ["Fighting", "Psychic"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Ice",
+  "takesDoubleFrom": ["Fighting", "Rock", "Steel", "Fire"],
+  "takesHalfFrom": ["Ice"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Dragon",
+  "takesDoubleFrom": ["Ice", "Dragon", "Fairy"],
+  "takesHalfFrom": ["Fire", "Water", "Grass", "Electric"],
+  "takesNoneFrom": []
+},
+{
+  "name": "Dark",
+  "takesDoubleFrom": ["Bug", "Fighting", "Fairy"],
+  "takesHalfFrom": ["Ghost", "Dark"],
+  "takesNoneFrom": ["Psychic"]
+},
+{
+  "name": "Fairy",
+  "takesDoubleFrom": ["Poison", "Steel"],
+  "takesHalfFrom": ["Bug", "Fighting", "Dark"],
+  "takesNoneFrom": ["Dragon"]
+}
+]
