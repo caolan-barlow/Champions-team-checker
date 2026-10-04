@@ -29,7 +29,7 @@ public class TypeChart {
     }
     
 
-    public double getDamageMultiplier(String attackingType, String defendingType) {
+    public double getDamageMultiplierForSingleType(String attackingType, String defendingType) {
 
         if (!isValidType(attackingType)) {
             throw new IllegalArgumentException("Unknown attacking type: " + attackingType);
@@ -54,6 +54,17 @@ public class TypeChart {
             }
 
             return damageMultiplier;
+    }
+
+    public double getDamageMultiplierForDualType(String attackingType, String defendingType1, String defendingType2) {
+
+        double totaldamageMultiplier = 1.0;
+
+        totaldamageMultiplier *= getDamageMultiplierForSingleType(attackingType, defendingType1);
+
+        totaldamageMultiplier *= getDamageMultiplierForSingleType(attackingType, defendingType2);
+
+        return totaldamageMultiplier;
     }
 
 }
