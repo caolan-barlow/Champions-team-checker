@@ -72,4 +72,11 @@ class TypeChartTest {
         assertEquals(0.0, typeChart.getDamageMultiplierForDualType("Ground","Flying","Steel"));
     }
 
+    @Test
+    void sameTypeForDualType() throws Exception {
+        TypeChart typeChart = new TypeChart();
+        assertThrows(IllegalArgumentException.class,
+            () -> typeChart.getDamageMultiplierForDualType("Fire", "Ground","Ground"));
+    }
+
 }

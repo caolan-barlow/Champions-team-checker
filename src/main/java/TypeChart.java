@@ -27,6 +27,10 @@ public class TypeChart {
 
         return false;
     }
+
+    private boolean isValidDualType(String typeName1, String typeName2) {
+        return !typeName1.equals(typeName2);
+}
     
 
     public double getDamageMultiplierForSingleType(String attackingType, String defendingType) {
@@ -57,6 +61,10 @@ public class TypeChart {
     }
 
     public double getDamageMultiplierForDualType(String attackingType, String defendingType1, String defendingType2) {
+
+        if (!isValidDualType(defendingType1, defendingType2)) {
+            throw new IllegalArgumentException("Defending types must be different, but both were: " + defendingType1);
+        }
 
         double totaldamageMultiplier = 1.0;
 
