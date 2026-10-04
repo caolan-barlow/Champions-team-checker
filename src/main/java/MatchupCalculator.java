@@ -1,5 +1,7 @@
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MatchupCalculator {
 
@@ -22,6 +24,19 @@ public class MatchupCalculator {
         }
 
     return typeChart.getDamageMultiplierForDualType(attackingType, pokemonTypes.get(0), pokemonTypes.get(1));
+    }
+
+    public Map<String, Double> getDamageTakenFromAllTypes(String pokemonName) {
+
+        Map<String, Double> damageTaken = new LinkedHashMap<>();
+
+        for (TypeEntry entry : typeChart.getTypes()) {
+        double multiplier = getDamageTaken(pokemonName, entry.name());
+        damageTaken.put(entry.name(), multiplier);
+        }
+
+        return damageTaken;
+
     }
 
 }

@@ -1,6 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.Map;
+
 import org.junit.jupiter.api.Test;
 
 class MatchupCalculatorTest {
@@ -34,5 +36,23 @@ class MatchupCalculatorTest {
         MatchupCalculator calculator = new MatchupCalculator();
         assertThrows(IllegalArgumentException.class,
                 () -> calculator.getDamageTaken("Banana", "Fire"));
+    }
+
+    @Test
+    void toxapexHasAnEntryForEveryType() throws Exception {
+        MatchupCalculator calculator = new MatchupCalculator();
+        Map<String, Double> damageTaken = calculator.getDamageTakenFromAllTypes("Toxapex");
+        assertEquals(18, damageTaken.size());
+    }
+
+    @Test
+    void toxapexProfileHasTheRightMultipliers() throws Exception {
+        MatchupCalculator calculator = new MatchupCalculator();
+        Map<String, Double> damageTaken = calculator.getDamageTakenFromAllTypes("Toxapex");
+        assertEquals(2.0, damageTaken.get("Ground"));
+        assertEquals(2.0, damageTaken.get("Electric"));
+        assertEquals(2.0, damageTaken.get("Psychic"));
+        assertEquals(0.5, damageTaken.get("Fire"));
+        assertEquals(1.0, damageTaken.get("Normal"));
     }
 }
