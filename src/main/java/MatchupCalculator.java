@@ -41,15 +41,69 @@ public class MatchupCalculator {
 
     public int getWeakCount(List<String> team, String attackingType) {
 
-    int count = 0;
+        int count = 0;
 
-        for (String pokemonName : team) {
-            if (getDamageTaken(pokemonName, attackingType) > 1.0) {
-            count++;
-            }
-        }   
+            for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == 2.0) {
+                count++;
+                }
+            }   
 
         return count;
     }
+
+    public int getImmuneCount(List<String> team, String attackingType) {
+
+        int count = 0;
+
+            for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == 0.0) {
+                count++;
+                }
+            }   
+
+        return count;
+    }
+
+    public int getQuadWeakCount(List<String> team, String attackingType) {
+
+        int count = 0;
+
+            for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == 4.0) {
+                count++;
+                }
+            }   
+
+        return count;   
+    }
+
+    public int getQuadResistedCount(List<String> team, String attackingType) {
+
+        int count = 0;
+
+            for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == 0.25) {
+                count++;
+                }
+            }   
+
+        return count;   
+    }
+
+    public int getResistedCount(List<String> team, String attackingType) {
+
+        int count = 0;
+
+            for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == 0.5) {
+                count++;
+                }
+            }   
+
+        return count;   
+    }
+
+
 
 }

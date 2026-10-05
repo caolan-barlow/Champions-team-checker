@@ -58,10 +58,10 @@ class MatchupCalculatorTest {
     }
 
     @Test
-    void twoOfThreeAreWeakToGround() throws Exception {
+    void oneOfThreeAreWeakToGround() throws Exception {
         MatchupCalculator calculator = new MatchupCalculator();
         List<String> team = List.of("Toxapex", "Heatran", "Charizard");
-        assertEquals(2, calculator.getWeakCount(team, "Ground"));
+        assertEquals(1, calculator.getWeakCount(team, "Ground"));
     }   
 
     @Test
