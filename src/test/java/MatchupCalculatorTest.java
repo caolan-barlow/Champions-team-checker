@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
@@ -54,5 +55,26 @@ class MatchupCalculatorTest {
         assertEquals(2.0, damageTaken.get("Psychic"));
         assertEquals(0.5, damageTaken.get("Fire"));
         assertEquals(1.0, damageTaken.get("Normal"));
+    }
+
+    @Test
+    void twoOfThreeAreWeakToGround() throws Exception {
+        MatchupCalculator calculator = new MatchupCalculator();
+        List<String> team = List.of("Toxapex", "Heatran", "Charizard");
+        assertEquals(2, calculator.getWeakCount(team, "Ground"));
+    }   
+
+    @Test
+    void twoOfThreeAreWeakToWater() throws Exception {
+        MatchupCalculator calculator = new MatchupCalculator();
+        List<String> team = List.of("Toxapex", "Heatran", "Charizard");
+        assertEquals(2, calculator.getWeakCount(team, "Water"));
+    }
+
+    @Test
+    void nobodyIsWeakToNormal() throws Exception {
+        MatchupCalculator calculator = new MatchupCalculator();
+        List<String> team = List.of("Toxapex", "Heatran", "Charizard");
+        assertEquals(0, calculator.getWeakCount(team, "Normal"));
     }
 }

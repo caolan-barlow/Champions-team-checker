@@ -39,4 +39,17 @@ public class MatchupCalculator {
 
     }
 
+    public int getWeakCount(List<String> team, String attackingType) {
+
+    int count = 0;
+
+        for (String pokemonName : team) {
+            if (getDamageTaken(pokemonName, attackingType) > 1.0) {
+            count++;
+            }
+        }   
+
+        return count;
+    }
+
 }
