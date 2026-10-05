@@ -39,71 +39,43 @@ public class MatchupCalculator {
 
     }
 
-    public int getWeakCount(List<String> team, String attackingType) {
+    private int countWithMultiplier(List<String> team, String attackingType, double multiplier) {
 
         int count = 0;
 
-            for (String pokemonName : team) {
-                if (getDamageTaken(pokemonName, attackingType) == 2.0) {
+        for (String pokemonName : team) {
+                if (getDamageTaken(pokemonName, attackingType) == multiplier) {
                 count++;
                 }
-            }   
+            }
 
         return count;
+    }
+
+    public int getWeakCount(List<String> team, String attackingType) {
+
+        return countWithMultiplier(team, attackingType, 2.0);
     }
 
     public int getImmuneCount(List<String> team, String attackingType) {
 
-        int count = 0;
-
-            for (String pokemonName : team) {
-                if (getDamageTaken(pokemonName, attackingType) == 0.0) {
-                count++;
-                }
-            }   
-
-        return count;
+        return countWithMultiplier(team, attackingType, 0.0);
     }
 
     public int getQuadWeakCount(List<String> team, String attackingType) {
 
-        int count = 0;
-
-            for (String pokemonName : team) {
-                if (getDamageTaken(pokemonName, attackingType) == 4.0) {
-                count++;
-                }
-            }   
-
-        return count;   
+        return countWithMultiplier(team, attackingType, 4.0);
     }
 
-    public int getQuadResistedCount(List<String> team, String attackingType) {
+    public int getQuadResistCount(List<String> team, String attackingType) {
 
-        int count = 0;
-
-            for (String pokemonName : team) {
-                if (getDamageTaken(pokemonName, attackingType) == 0.25) {
-                count++;
-                }
-            }   
-
-        return count;   
+        return countWithMultiplier(team, attackingType, 0.25);
     }
 
-    public int getResistedCount(List<String> team, String attackingType) {
+    public int getResistCount(List<String> team, String attackingType) {
 
-        int count = 0;
-
-            for (String pokemonName : team) {
-                if (getDamageTaken(pokemonName, attackingType) == 0.5) {
-                count++;
-                }
-            }   
-
-        return count;   
+        return countWithMultiplier(team, attackingType, 0.5);
     }
-
 
 
 }

@@ -11,8 +11,19 @@ public class Main {
         List<String> team = List.of("Toxapex", "Heatran", "Charizard", "Garchomp", "Sylveon", "Tyranitar");
 
         for (TypeEntry entry : typeChart.getTypes()) {
+
+            int quadWeakCount = calculator.getQuadWeakCount(team, entry.name());
+
             int weakCount = calculator.getWeakCount(team, entry.name());
-            System.out.println(entry.name() + ": " + weakCount + " weak");
+
+            int resistCount = calculator.getResistCount(team, entry.name());
+
+            int quadResistCount = calculator.getQuadResistCount(team, entry.name());
+
+            int immuneCount = calculator.getImmuneCount(team, entry.name());
+
+
+            System.out.println(entry.name() + ": " + quadWeakCount + " quad weak, " + weakCount + " weak, " + resistCount + " resist, " + quadResistCount + " quad resist, " + immuneCount + " immune, ");
         }
     }
 }
