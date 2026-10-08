@@ -1,0 +1,106 @@
+[
+  {
+    "weatherName": "Rain",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Damp Rock",
+    "setterAbilities": [
+      "Drizzle"
+    ],
+    "setterMoves": [
+      "Rain Dance"
+    ],
+    "moveTypeMultipliers": {
+      "Water": 1.5,
+      "Fire": 0.5
+    },
+    "speedDoubleAbilities": [
+      "Swift Swim"
+    ],
+    "residualDamageFraction": 0,
+    "residualImmuneTypes": [],
+    "statBoostedTypes": [],
+    "boostedStat": "",
+    "statBoostMultiplier": 1,
+    "description": "Water moves deal 1.5x damage, Fire moves 0.5x. Thunder and Hurricane never miss. Solar Beam and Solar Blade power is halved. Swift Swim doubles Speed."
+  },
+  {
+    "weatherName": "Sun",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Heat Rock",
+    "setterAbilities": [
+      "Drought",
+      "Orichalcum Pulse"
+    ],
+    "setterMoves": [
+      "Sunny Day"
+    ],
+    "moveTypeMultipliers": {
+      "Fire": 1.5,
+      "Water": 0.5
+    },
+    "speedDoubleAbilities": [
+      "Chlorophyll"
+    ],
+    "residualDamageFraction": 0,
+    "residualImmuneTypes": [],
+    "statBoostedTypes": [],
+    "boostedStat": "",
+    "statBoostMultiplier": 1,
+    "description": "Fire moves deal 1.5x damage, Water moves 0.5x. Solar Beam and Solar Blade need no charge turn. Thunder and Hurricane have 50% accuracy. Nothing can be frozen. Chlorophyll doubles Speed."
+  },
+  {
+    "weatherName": "Sandstorm",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Smooth Rock",
+    "setterAbilities": [
+      "Sand Stream",
+      "Sand Spit"
+    ],
+    "setterMoves": [
+      "Sandstorm"
+    ],
+    "moveTypeMultipliers": {},
+    "speedDoubleAbilities": [
+      "Sand Rush"
+    ],
+    "residualDamageFraction": 0.0625,
+    "residualImmuneTypes": [
+      "Rock",
+      "Ground",
+      "Steel"
+    ],
+    "statBoostedTypes": [
+      "Rock"
+    ],
+    "boostedStat": "Sp.Def",
+    "statBoostMultiplier": 1.5,
+    "description": "Pokemon that are not Rock, Ground or Steel lose 1/16 max HP each turn. Rock types get 1.5x Sp. Def. Solar Beam and Solar Blade power is halved. Sand Rush doubles Speed."
+  },
+  {
+    "weatherName": "Snow",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Icy Rock",
+    "setterAbilities": [
+      "Snow Warning"
+    ],
+    "setterMoves": [
+      "Snowscape"
+    ],
+    "moveTypeMultipliers": {},
+    "speedDoubleAbilities": [
+      "Slush Rush"
+    ],
+    "residualDamageFraction": 0,
+    "residualImmuneTypes": [],
+    "statBoostedTypes": [
+      "Ice"
+    ],
+    "boostedStat": "Def",
+    "statBoostMultiplier": 1.5,
+    "description": "Ice types get 1.5x Defense. Blizzard never misses. Aurora Veil can only be used in Snow. Solar Beam and Solar Blade power is halved. Slush Rush doubles Speed. No chip damage."
+  }
+]

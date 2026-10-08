@@ -1,0 +1,94 @@
+[
+  {
+    "terrainName": "Electric Terrain",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Terrain Extender",
+    "setterAbilities": [
+      "Electric Surge",
+      "Hadron Engine"
+    ],
+    "setterMoves": [
+      "Electric Terrain"
+    ],
+    "moveTypeMultipliers": {
+      "Electric": 1.3
+    },
+    "moveTypeMultipliersAgainstGrounded": {},
+    "speedDoubleAbilities": [
+      "Surge Surfer"
+    ],
+    "blocksPriorityMovesOnGrounded": false,
+    "healFractionPerTurn": 0,
+    "blocksSleepOnGrounded": true,
+    "blocksStatusOnGrounded": false,
+    "description": "Grounded Pokemon's Electric moves deal 1.3x damage. Grounded Pokemon cannot fall asleep. Surge Surfer doubles Speed."
+  },
+  {
+    "terrainName": "Grassy Terrain",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Terrain Extender",
+    "setterAbilities": [
+      "Grassy Surge",
+      "Seed Sower"
+    ],
+    "setterMoves": [
+      "Grassy Terrain"
+    ],
+    "moveTypeMultipliers": {
+      "Grass": 1.3
+    },
+    "moveTypeMultipliersAgainstGrounded": {},
+    "speedDoubleAbilities": [],
+    "blocksPriorityMovesOnGrounded": false,
+    "healFractionPerTurn": 0.0625,
+    "blocksSleepOnGrounded": false,
+    "blocksStatusOnGrounded": false,
+    "description": "Grounded Pokemon's Grass moves deal 1.3x damage. Grounded Pokemon heal 1/16 max HP each turn. Earthquake and Bulldoze deal half damage to grounded targets."
+  },
+  {
+    "terrainName": "Psychic Terrain",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Terrain Extender",
+    "setterAbilities": [
+      "Psychic Surge"
+    ],
+    "setterMoves": [
+      "Psychic Terrain"
+    ],
+    "moveTypeMultipliers": {
+      "Psychic": 1.3
+    },
+    "moveTypeMultipliersAgainstGrounded": {},
+    "speedDoubleAbilities": [],
+    "blocksPriorityMovesOnGrounded": true,
+    "healFractionPerTurn": 0,
+    "blocksSleepOnGrounded": false,
+    "blocksStatusOnGrounded": false,
+    "description": "Grounded Pokemon's Psychic moves deal 1.3x damage. Priority moves cannot hit grounded targets (Fake Out, Prankster-boosted moves, Quick Attack)."
+  },
+  {
+    "terrainName": "Misty Terrain",
+    "durationTurns": 5,
+    "extendedDurationTurns": 8,
+    "extenderItem": "Terrain Extender",
+    "setterAbilities": [
+      "Misty Surge"
+    ],
+    "setterMoves": [
+      "Misty Terrain"
+    ],
+    "moveTypeMultipliers": {},
+    "moveTypeMultipliersAgainstGrounded": {
+      "Dragon": 0.5
+    },
+    "speedDoubleAbilities": [],
+    "blocksPriorityMovesOnGrounded": false,
+    "healFractionPerTurn": 0,
+    "blocksSleepOnGrounded": true,
+    "blocksStatusOnGrounded": true,
+    "description": "Dragon moves deal half damage to grounded targets. Grounded Pokemon cannot be given a major status condition or confusion."
+  }
+]
